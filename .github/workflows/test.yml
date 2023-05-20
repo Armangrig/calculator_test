@@ -1,9 +1,12 @@
 name: Test python
 
-permissions write-all
-
 on:
   workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  checks: write
 
 jobs:
   tests:
