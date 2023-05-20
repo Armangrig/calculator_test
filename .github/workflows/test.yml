@@ -27,7 +27,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest -rp calculator pytest.py > Pytests${{ github.run_number }}.txt
+        pytest -rp calculator_pytest.py > Pytests${{ github.run_number }}.txt
     - name: Run unittests
       run: |
         python -m unittest -v calculator_unittest.py > unittests${{ github.run_number }}.txt
