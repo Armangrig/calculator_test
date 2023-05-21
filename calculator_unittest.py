@@ -77,7 +77,7 @@ if __name__ == '__main__':
 suite = unittest.TestLoader().loadTestsFromTestCase(CalculatorTest)
 
 # Save the verbose output to a file using shell redirection
-with open('Unittest_results.txt', 'w') as f:
+#with open('Unittest_results.txt', 'w') as f:
     # Run the tests with verbosity and redirect the output to the file
-    unittest.TextTestRunner(stream=f, verbosity=2).run(suite)
+#    unittest.TextTestRunner(stream=f, verbosity=2).run(suite)
 
