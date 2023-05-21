@@ -25,12 +25,12 @@ jobs:
         pytest -rp calculator_pytest.py > Pytests${{ github.run_number }}.txt
     - name: Run unittests
       run: |
-        python -m unittest -v calculator_unittest.py > Unittest_results.txt 2>&1
+        python -m unittest -v calculator_unittest.py > Unittest${{ github.run_number }}.txt 2>&1
     - name: Commit files
       run: |
         git config --local user.email "armangrig.ag@gmail.com"
         git config --local user.name "Arman"
-        git add Pytests${{ github.run_number }}.txt Unittest_results.txt     
+        git add Pytests${{ github.run_number }}.txt Unittest${{ github.run_number }}.txt     
         git commit -m "Tests ${{ github.run_number }}.txt"
         git push
     - name: Push changes
