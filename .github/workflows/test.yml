@@ -25,7 +25,7 @@ jobs:
         pytest -rp calculator_pytest.py > Pytests${{ github.run_number }}.txt
     - name: Run unittests
       run: |
-        python -m unittest -v calculator_unittest.py 
+        python -m unittest -v calculator_unittest.py > Unittest_results.txt 2>&1
     - name: Commit files
       run: |
         git config --local user.email "armangrig.ag@gmail.com"
