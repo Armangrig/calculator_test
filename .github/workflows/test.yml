@@ -30,7 +30,7 @@ jobs:
       run: |
         git config --local user.email "armangrig.ag@gmail.com"
         git config --local user.name "Arman"
-        git add Pytests${{ github.run_number }}.txt unittests${{ github.run_number }}.txt         
+        git add Pytests${{ github.run_number }}.txt unittests${{ github.run_number }}.txt Unittest_results.txt     
         git commit -m "Tests ${{ github.run_number }}.txt"
         git push
     - name: Push changes
